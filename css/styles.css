@@ -261,7 +261,7 @@ header {
 }
 .products-container #featured-products .featured-collections-image, .products-container #featured-collections .featured-collections-image, .products-container #featured-on-sale .featured-collections-image {
   position: relative;
-  margin: 0;
+  margin: 0 auto;
   width: 10rem;
   height: 10rem;
   background-color: #0C0D0D;
