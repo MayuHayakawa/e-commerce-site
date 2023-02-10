@@ -1,0 +1,117 @@
+.cart-hidden {
+    display: none;
+}
+
+.empty-hidden {
+    display: none;
+}
+
+main {
+    text-align: center;
+}
+
+.cart-container {
+    padding: 0 3rem;
+    .cart-header {
+        a {
+            color: $primary-color;
+        }
+        a:visited {
+            color: $primary-color;
+        }
+    }
+    table {
+        width: 100%;
+        margin: 0;
+        thead {
+            width: 100%;
+            tr {
+                width: 100%;
+                height: 3rem;
+                padding-top: 3rem;
+                display: grid;
+                grid-template-columns: 3fr 1fr 1fr 1fr;
+                border-bottom: solid 2px $secondary-color;
+            }
+        }
+        tbody {
+            width: 100%;
+            tr {
+                width: 100%;
+                padding: 1rem 0;
+                display: grid;
+                grid-template-columns: 3fr 1fr 1fr 1fr;
+                border-bottom: solid 1px $secondary-color;
+                td {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .cart-item-image {
+                    width: 10rem;
+                    height: 10rem;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .cart-item-description {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 15rem;
+                    button {
+                        @extend %button;
+                        background-color: transparent;
+                        color: $primary-color;
+                        border: solid 1px $primary-color;
+                        width: 5rem;
+                    }
+                }
+                .cart-item-qty {
+                    .qty-minus,.qty-plus {
+                        font-size: 1.5rem;
+                        background-color: transparent;
+                        border: none;
+                        cursor: pointer;
+                    }
+                    .qty-change {
+                        width: 2rem;
+                        font-size: 1.5rem;
+                        border: none;
+                        font-family: $primary-font;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    .cart-footer {
+        text-align: right;
+        margin: 0 1rem;
+        .cart-subtotal {
+            margin: 1rem 0;
+            font-size: 1.5rem;
+        }
+        .cart-button {
+            button {
+                @extend %button;
+                font-size: 1.5rem;
+                width: 10rem;
+            }
+        }
+    }
+}
+
+.empty-cart-container {
+    height: 60vh;
+    a {
+        color: $primary-color;
+    }
+    a:visited {
+        color: $primary-color;
+    }
+}
+

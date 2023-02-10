@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8d6aec8656.js" crossorigin="anonymous"></script>
+    <title>Artificial Nails Online Store</title>
+</head>
+<body>
+    <div class="cart-popup popup-hidden">
+        <div class="cart-popup-header">
+            <h2>JUST ADDED TO YOUR CART</h2>
+            <button class="cart-popup-close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="line"></div>
+        <div class="cart-popup-item">
+            <div class="cart-popup-item-image">
+                <img class="cart-popup-item-image-src" />
+            </div>
+            <div class="cart-popup-item-description">
+                <p class="cart-popup-item-description-name"></p>
+                <p>Qty: 1</p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <a href="./cart.html">View cart (<span class="item-qty"></span>)</a>
+        <div class="cart-popup-dismiss">
+            <button class="cart-popup-close">Continue shopping</button>
+        </div>
+    </div>
+    <header>
+        <div class="header-container">
+            <div></div>
+            <a href="./index.html">
+                <h1>ARTIFICIAL NAILS</h1>
+            </a>
+            <div class="side-menu">
+                <div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="cart-icon">
+                    <a href="./cart.html">
+                        <i class="fa-solid fa-bag-shopping">
+                            <span class="item-qty"></span>
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-image">
+            <img src="./aseets/IMG_2426.JPG" alt="main-image" />
+        </div>
+        <div class="products-container">
+            <section class="products">
+                <h2>FEATURED PRODUCTS</h2>
+                <ul id="featured-products"></ul>
+            </section>
+
+            <div class="line"></div>
+            
+            <section class="collections">
+                <h2>FEATURED COLLECTIONS</h2>
+                <ul id="featured-collections">
+                    <li>
+                        <div class="featured-collections-image">
+                            <img src="https://images.unsplash.com/photo-1493799817216-4b57dda4229f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2944&q=80" alt="Valentine's Day Nails">
+                            <p>Valentine's Day Nails</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="featured-collections-image">
+                            <img src="https://images.unsplash.com/photo-1491295192310-9b78234be718?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="Simple Nails">
+                            <p>Simple Nails</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="featured-collections-image">
+                            <img src="https://images.unsplash.com/photo-1588015810531-dd522c9c8bbb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=802&q=80" alt="Winter Nails">
+                            <p>Winter Nails</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="featured-collections-image">
+                            <img src="https://images.unsplash.com/photo-1609151089550-66b95fc54ff2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="Wedding Nails">
+                            <p>Wedding Nails</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <div class="line"></div>
+
+            <section class="on-sale">
+                <h2>ON SALE</h2>
+                <ul id="featured-on-sale"></ul>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 ARTIFICIAL NAILS</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.2/axios.min.js" integrity="sha512-NCiXRSV460cHD9ClGDrTbTaw0muWUBf/zB/yLzJavRsPNUl9ODkUVmUHsZtKu17XknhsGlmyVoJxLg/ZQQEeGA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

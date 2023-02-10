@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+
+$primary-font: 'PT Sans Narrow', sans-serif;
+$secondary-font: 'Amatic SC', cursive;
+
+$primary-color: #BF958D;
+$secondary-color: #E6E5E6;
+$third-color: #747378;
+$fourth-color: #B14D59;
+// $fifth-color: #c8e0d4;
+$black-color: #0C0D0D;
+
+:root {
+    font-family: $primary-font;
+    color: $black-color;
+}
+
+%button {
+    padding: 0.5rem;
+    margin: 0 0 0.5rem 0;
+    font-family: $primary-font;
+    color: white;
+    background-color: $primary-color;
+    border: none;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0 0 8px $secondary-color;
+    }
+}

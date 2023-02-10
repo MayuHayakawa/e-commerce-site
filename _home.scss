@@ -1,0 +1,199 @@
+.popup-hidden {
+    display: none;
+}
+
+.popup-message {
+    animation: popup 5s forwards;
+}
+  
+@keyframes popup {
+    0% {
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+    10%, 90% {
+        transform: none;
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-30%);
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.cart-popup {
+    width: 20rem;
+    height: 16rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    text-align: center;
+    color: $secondary-color;
+    background-color: $primary-color;
+    z-index: 100;
+
+    &-header {
+        display: flex;
+        justify-content: space-around;
+        h2 {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+        }
+        button {
+            padding: 0.5rem;
+            color: $secondary-color;
+            background: transparent;
+            border: none;
+        }
+    }
+    &-item {
+        display: flex;
+        height: 7rem;
+        justify-content: space-evenly;
+        margin-bottom: 0.5rem;
+        &-image {
+            width: 7rem;
+            height: 7rem;
+            &-src {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-description {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            p {
+                margin: 1rem 0;
+            }
+            &-name {
+                overflow-wrap: break-word;
+            }
+        }
+    }
+    a {
+        display:inline-block;
+        width: 100%;
+        padding: 0.5rem 0;
+        border: solid 1px $secondary-color;
+        margin-bottom: 0.5rem;
+        text-decoration: none;
+        color: $primary-color;
+        background-color: $secondary-color;
+    }
+    a:visited {
+        color: $primary-color;
+    }
+    &-dismiss {
+        height: 2rem;
+        button {
+            padding: 0.5rem;
+            color: $secondary-color;
+            background: transparent;
+            border: none;
+        }
+    }
+}
+
+.main-image {
+    width: 100%;
+    height: 20rem;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.line {
+    border-bottom: solid 1px $secondary-color;
+    margin: 0.5rem;
+}
+
+.products-container {
+    padding: 0 3rem;
+    text-align: center;
+    #featured-products,#featured-collections,#featured-on-sale {
+        display: grid;
+        padding: 0;
+        width: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        li {
+            list-style: none;
+            transition: 1s;
+        }
+        .product-card {
+            .product-image {
+                width: 10rem;
+                height: 10rem;
+                margin: auto;
+                padding-top: 1rem;
+                transition: transform 1s;
+                img {
+                    width: 90%;
+                    height: 90%;
+                    object-fit: cover;
+                }
+            }
+            .sale-price {
+                display: flex;
+                justify-content: center;
+                .original-price {
+                    color: $fourth-color;
+                    text-decoration: line-through;
+                }
+            }
+            p {
+                margin: 0 0 0.2rem 0;
+            }
+            button {
+                @extend %button;
+            }
+        }
+        .product-card:hover {
+            // background-color: $secondary-color;
+            box-shadow: 0 0 8px $secondary-color;
+            .product-image {
+                transform: scale(1.1);
+            }
+        }
+
+        .featured-collections-image {
+            position: relative;
+            margin: 0;
+            width: 10rem;
+            height: 10rem;
+            background-color: $black-color;
+            cursor: pointer;
+            p {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                margin:0;
+                padding:0;
+                color: white;
+            }
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 1;
+                transition: all 0.5s;
+            }
+        }
+        .featured-collections-image:hover {
+            img {
+                opacity: 0.5;
+            }
+
+        }
+    }
+}
