@@ -4,8 +4,9 @@ shoppingCart = Object.keys(localStorage).map(key => {
     return JSON.parse(localStorage.getItem(key));
 })
 
-const API = "http://jsonblob.com/api/1146207361479598080";
-// const API = "http://jsonblob.com/api/1072369618240421888"; //add "/api/"
+const API = "http://jsonblob.com/api/1218035667581132800";
+// const API = "http://jsonblob.com/api/1146207361479598080";
+// const API = "http://jsonblob.com/api/1072369618240421888"; //add "/api/" between ~com and numbers
 
 const itemQtys = document.querySelectorAll(".item-qty");
 let itemCount = shoppingCart.reduce((sum, i) => sum + i.quantity, 0);
